@@ -22,7 +22,7 @@ define fstab(
   }
 
   case $::osfamily {
-    redhat, debian, fedora: {
+    redhat, debian, fedora, ubuntu: {
       fstab::augeas { $name:
         ensure => $ensure,
         source => $source,
